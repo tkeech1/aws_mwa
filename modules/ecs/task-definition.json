@@ -1,0 +1,27 @@
+[
+  {
+    "name": "MWA-Service",
+    "image": "${ecr_image_tag}",
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "protocol": "http"
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${mwa_log_group}",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "${mwa_log_group}"
+      }
+    },
+    "environment": [
+      {
+        "name": "variable",
+        "value": "value"
+      }
+    ],
+    "essential": true
+  }
+]
