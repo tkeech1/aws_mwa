@@ -47,12 +47,12 @@ module "mwa_ecs" {
   environment           = "mwa"
 }
 
-module "mwa_analytics" {
+/*module "mwa_analytics" {
   source       = "./modules/analytics"
   api_endpoint = module.mwa.mwa_api_endpoint
   environment  = "mwa"
   region       = var.region
-}
+}*/
 
 module "mwa_s3deploy" {
   source                      = "./modules/s3deploy"
